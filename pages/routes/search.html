@@ -16,11 +16,11 @@
 </head>
 <body class="d-flex flex-column h-100">
     <header id="header"></header>
-    <main role="main">
+    <main role="main" class="flex-grow-1 d-flex flex-column">
         <section>
             <img src="./../../public/images/routes/search/map.png" alt="Carte de la région" class="img-fluid"/>
         </section>
-        <section class="mt-2 border border-black rounded-top p-2 bg-opacity-50 bg-success">
+        <section class="mt-2 border-top border-black rounded-top p-2 bg-green-light">
             <!-- recherche -->
             <div class="d-flex justify-content-between">
                 <div>
@@ -29,7 +29,7 @@
                         16 °C
                     </span>
                 </div>
-                <div class="border rounded-circle bg-success">
+                <div>
                     <button type="button" class="btn btn-success">
                         <i class="bi bi-sliders"></i>
                     </button>
@@ -37,39 +37,53 @@
             </div>
             <div class="d-flex justify-content-center my-2 px-5">
                 <label for="start" class="col-form-label me-2">Itinéraires</label>
-                <input name="start" class="form-control" type="text" placeholder="point de dépard" />
+                <input name="start" class="form-control bg-brown-f" type="text" placeholder="point de dépard" />
             </div>
-            <table>
-                <tr>
-                    <td>Super tour</td>
-                    <td>7 km</td>
-                    <td>+/- 45 m</td>
-                </tr>
-                <tr>
-                    <td>Super tour</td>
-                    <td>7 km</td>
-                    <td>+/- 45 m</td>
-                </tr>
-                <tr>
-                    <td>Super tour</td>
-                    <td>7 km</td>
-                    <td>+/- 45 m</td>
-                </tr>
-                <tr>
-                    <td>Super tour</td>
-                    <td>7 km</td>
-                    <td>+/- 45 m</td>
-                </tr>
-                <tr>
-                    <td>Super tour</td>
-                    <td>7 km</td>
-                    <td>+/- 45 m</td>
-                </tr>
-            </table>
+            <div class="d-flex flex-column">
+                <div class="row">
+                    <span class="col-1">#</span>
+                    <span class="col-5">Nom</span>
+                    <span class="col-3">Distance</span>
+                    <span class="col-3">Dénivelé</span>
+                </div>
+                <a class="row text-decoration-none text-dark border-top" href="#">
+                    <span class="col-1">1</span>
+                    <span class="col-5">Super chemin</span>
+                    <span class="col-3">30 km</span>
+                    <span class="col-3">+/- 400 m</span>
+                </a>
+                <a class="row text-decoration-none text-dark border-top" href="#">
+                    <span class="col-1">2</span>
+                    <span class="col-5">Super chemin</span>
+                    <span class="col-3">30 km</span>
+                    <span class="col-3">+/- 400 m</span>
+                </a>
+                <a class="row text-decoration-none text-dark border-top" href="#">
+                    <span class="col-1">3</span>
+                    <span class="col-5">Super chemin</span>
+                    <span class="col-3">30 km</span>
+                    <span class="col-3">+/- 400 m</span>
+                </a>
+            </div>
         </section>
+        <section class="flex-grow-1 bg-opacity-50 bg-green-light"></section>
     </main>
-    <footer class="mt-auto">
-        <!-- navigation du bas -->
+    <footer class="d-flex justify-content-around border-top bg-green">
+        <div>
+            <i class="bi bi-geo-alt-fill font-30px"></i>
+        </div>
+        <div>
+            <i class="bi bi-bookmark-star-fill font-30px"></i>
+        </div>
+        <div>
+            <i class="bi bi-info-circle-fill font-30px"></i>
+        </div>
+        <div>
+            <i class="bi bi-people-fill font-30px"></i>
+        </div>
+        <div>
+            <i class="bi bi-heart-pulse-fill font-30px"></i>
+        </div>
     </footer>
 </body>
 </html>

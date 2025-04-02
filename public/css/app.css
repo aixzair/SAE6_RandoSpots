@@ -1,0 +1,21 @@
+:root {
+    --green : #37a635;
+    --green-light : #77E675;;
+    --brown : #a66c35;
+}
+
+.bg-green {
+    background-color: var(--green);
+}
+
+.bg-green-light {
+    background-color: var(--green-light);
+}
+
+.bg-brown-f {
+    background-color: var(--brown) !important;
+}
+
+.font-30px {
+    font-size: 30px;
+}
