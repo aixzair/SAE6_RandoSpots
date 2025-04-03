@@ -4,10 +4,7 @@ import root from './../../app/root.js';
 fetch(`${root()}/pages/partials/header.html`)
 .then(response => response.text())
 .then(header => {
-    // TODO
-    header = header.replaceAll('__PROFIL__', root() + '/pages/profil.html');
-    header = header.replaceAll('__PROJECTS__', root() + '/pages/project/index.html');
-    header = header.replaceAll('__CONTACT__', root() + '/pages/contact.html');
+    header = header.replaceAll('__HOME__', root() + '/index.html');
 
     document.getElementById('header').innerHTML = header;
 })
@@ -20,6 +17,8 @@ if (footerPrimary != undefined) {
     fetch(`${root()}/pages/partials/footer-primary.html`)
     .then(response => response.text())
     .then(footer => {
+        footer = footer.replaceAll('__HOME__', root() + '/index.html');
+
         footerPrimary.innerHTML = footer;
     })
     .catch(error => console.error(error));

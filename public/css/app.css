@@ -7,8 +7,9 @@
 
 :root {
     --green : #37a635;
-    --green-light : #77E675;;
+    --green-light : #77E675;
     --brown : #a66c35;
+    --brown-light : #dbc4ae;
 }
 
 
@@ -18,6 +19,10 @@
 
 .bg-brown-f {
     background-color: var(--brown) !important;
+}
+
+.bg-brown-light {
+    background-color: var(--brown-light);
 }
 
 .bg-green {
