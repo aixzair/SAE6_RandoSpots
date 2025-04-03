@@ -5,6 +5,7 @@ fetch(`${root()}/pages/partials/header.html`)
 .then(response => response.text())
 .then(header => {
     header = header.replaceAll('__HOME__', root() + '/index.html');
+    header = header.replaceAll('__HISTORY__', root() + '/pages/routes/history.html');
 
     document.getElementById('header').innerHTML = header;
 })
@@ -18,6 +19,7 @@ if (footerPrimary != undefined) {
     .then(response => response.text())
     .then(footer => {
         footer = footer.replaceAll('__HOME__', root() + '/index.html');
+        footer = footer.replaceAll('__HISTORY__', root() + '/pages/routes/history.html');
 
         footerPrimary.innerHTML = footer;
     })
