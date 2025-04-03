@@ -1,0 +1,50 @@
+@font-face {
+    font-family: baloo;
+    src: url('./../../modules/fonts/baloo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --green : #37a635;
+    --green-light : #77E675;
+    --brown : #a66c35;
+    --brown-light : #dbc4ae;
+}
+
+
+* {
+    font-family: baloo;
+}
+
+.bg-brown-f {
+    background-color: var(--brown) !important;
+}
+
+.bg-brown-light {
+    background-color: var(--brown-light);
+}
+
+.bg-green {
+    background-color: var(--green);
+}
+
+.bg-green-light {
+    background-color: var(--green-light);
+}
+
+.font-30px {
+    font-size: 30px;
+}
+
+.text-green {
+    color: var(--green);
+}
+
+.text-brown {
+    color: var(--brown);
+}
+
+.h-30px {
+    height: 30px;
+}
