@@ -4,6 +4,7 @@ import root from './../../app/root.js';
 fetch(`${root()}/pages/partials/header.html`)
 .then(response => response.text())
 .then(header => {
+    header = header.replaceAll('__LOGIN__', root() + '/pages/connection/login.html');
     header = header.replaceAll('__HOME__', root() + '/index.html');
     header = header.replaceAll('__HISTORY__', root() + '/pages/routes/history.html');
 
