@@ -16,7 +16,7 @@
 </head>
 <body class="d-flex flex-column h-100">
     <header id="header"></header>
-    <main role="main" class="flex-grow-1 d-flex flex-column">
+    <main role="main" class="flex-grow-1 d-flex flex-column" style="background-image: url('./../../public/images/maps/details/map.png');">
         <section class="my-2 d-flex justify-content-center px-5">
             <div class="input-group">
                 <label for="search"></label>
@@ -24,12 +24,66 @@
                 <a href="./select.html" class="input-group-text">
                     <span id="basic-addon2"><i class="bi bi-search"></i></span>
                 </a>
+                <button type="button" id="mapFiltersModalOpenBtn" class="m-2 btn btn-success">
+                    <i class="bi bi-sliders"></i>
+                </button> 
             </div>
         </section>
-        <a class="flex-grow-1" style="background-image: url('./../../public/images/maps/details/map.png');"
-            href="./select.html">
-        </a>
+        <a class="flex-grow-1 d-flex flex-column" href="./select.html"></a>
     </main>
     <footer id="footer-primary"></footer>
 </body>
+<script src="./../../public/js/maps/mapFiltersModal.js" type="module"></script>
+<div id="mapFiltersModal" class="modal position-absolute top-50 start-50 translate-middle" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="ms-2 modal-title">Filtres</h5>
+                <button type="button" id="mapFiltersModalCloseBtn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>    
+            </div>
+            <div class="modal-body d-flex flex-column">
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="d-flex flex-column col-5 mb-2">
+                        <p>Départ</p>
+                        <input type="text" id="startingPoint" name="startingPoint" size="10"/>
+                    </div>
+                    <div class="d-flex flex-column col-5">
+                        <p>Arrivée</p>
+                        <input type="text" id="arrivalPoint" name="arrivalPoint" size="10"/>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="d-flex flex-column col-5 mb-2">
+                        <p>Durée</p>
+                        <input class="mb-2" type="range" id="rangeDuration" name="rangeDuration"/>
+                        <input type="text" id="fieldDuration" disabled="true">
+                        <p>minutes</p>
+                    </div>
+                    <div class="d-flex flex-column col-5">
+                        <p>Distance</p>
+                        <input class="mb-2" type="range" id="rangeDistance" name="rangeDistance" min="0" max="50"  step="1"/>
+                        <input type="text" id="fieldDistance" disabled="true">
+                        <p>km</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="d-flex flex-column col-5 mb-2">
+                        <p>Dénivelé</p>
+                        <input class="mb-2" type="range" id="rangeLevel" name="rangeLevel" min="0" max="250"  step="1"/>
+                        <input type="text" id="fieldLevel" disabled="true">
+                        <p>m</p>
+                    </div>
+                    <div class="d-flex flex-column col-5">
+                        <p>Difficulté</p>
+                        <input class="mb-2" type="range" id="rangeDifficulty" name="rangeDifficulty" min="0" max="8"  step="1" list="tickmarks"/>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="mapFiltersModalCancelBtn" class="m-2 btn btn-danger">Annuler</button>
+                <button type="button" id="mapFiltersModalConfirmBtn" class="m-2 btn btn-success">Confirmer</button>
+            </div>
+        </div>
+    </div>
+</div>
 </html>
