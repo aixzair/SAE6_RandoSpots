@@ -7,6 +7,7 @@ fetch(`${root()}/pages/partials/header.html`)
     header = header.replaceAll('__LOGIN__', root() + '/pages/connection/login.html');
     header = header.replaceAll('__HOME__', root() + '/index.html');
     header = header.replaceAll('__HISTORY__', root() + '/pages/routes/history.html');
+    header = header.replaceAll('__HELP__', root() + '/pages/others/emergencies.html');
 
     document.getElementById('header').innerHTML = header;
 })
@@ -21,6 +22,7 @@ if (footerPrimary != undefined) {
     .then(footer => {
         footer = footer.replaceAll('__HOME__', root() + '/index.html');
         footer = footer.replaceAll('__HISTORY__', root() + '/pages/routes/history.html');
+        footer = footer.replaceAll('__HELP__', root() + '/pages/others/emergencies.html');
 
         footerPrimary.innerHTML = footer;
     })
