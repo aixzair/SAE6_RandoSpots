@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rando Spots</title>
+    <link rel="icon" href="./public/favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./../../public/css/app.css" />
+    <script src="./../../public/js/app.js" type="module"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./../../modules/bootstrap/css/bootstrap.css" />
+    <script src="./../../modules/bootstrap/js/bootstrap.bundle.js"></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header id="header"></header>
+    <main role="main" class="flex-grow-1 d-flex flex-column">
+        <section>
+            <a href="./../maps/details.html">
+                <img src="./../../public/images/routes/details/map.png" alt="Carte de la région" class="img-fluid" />
+            </a>
+        </section>
+        <section class="py-2 d-flex flex-column justify-content-center bg-green">
+            <span class="mx-auto">Promenade en forêt</h1>
+            <div class="mx-auto">
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="ext-btn ext-btn-brown">
+                        <i class="bi bi-info-circle"></i>
+                    </button>
+                    <button type="button" class="ms-4 btn btn-success">
+                        <i class="bi bi-play-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="pt-2 border-top border-white rounded-top p-2 bg-green-light">
+            <!-- recherche -->
+            <div class="d-flex justify-content-between">
+                <div>
+                    <span>
+                        <i class="bi bi-cloud-sun"></i>
+                        16 °C
+                    </span>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary">
+                        <i class="bi bi-star"></i>
+                    </button>
+                    <button type="button" class="ms-2 btn btn-success">
+                        <i class="bi bi-sliders"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center my-2 px-5">
+                <label for="start" class="col-form-label me-2">Itinéraires</label>
+                <input name="start" class="form-control bg-brown-f" type="text" placeholder="point de départ" />
+            </div>
+            <div class="d-flex flex-column">
+                <div class="row">
+                    <span class="col-1">#</span>
+                    <span class="col-4">Nom</span>
+                    <span class="col-3">Distance</span>
+                    <span class="col-4">Dénivelé</span>
+                </div>
+                <a class="row text-decoration-none text-dark border-top" href="./details.html">
+                    <span class="col-1">1</span>
+                    <span class="col-4">Promenade des 3 cuites</span>
+                    <span class="col-3">30 km</span>
+                    <span class="col-4">+/- 400 m</span>
+                </a>
+                <a class="row text-decoration-none text-dark border-top" href="./details.html">
+                    <span class="col-1">2</span>
+                    <span class="col-4">Tour du lac</span>
+                    <span class="col-3">30 km</span>
+                    <span class="col-4">+/- 400 m</span>
+                </a>
+                <a class="row text-decoration-none text-dark border-top" href="./details.html">
+                    <span class="col-1">3</span>
+                    <span class="col-4">Périple en forêt</span>
+                    <span class="col-3">30 km</span>
+                    <span class="col-4">+/- 400 m</span>
+                </a>
+            </div>
+        </section>
+        <section class="flex-grow-1 bg-opacity-50 bg-green-light"></section>
+    </main>
+    <footer id="footer-primary" class="mt-auto"></footer>
+</body>
+
+</html>

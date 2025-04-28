@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rando Spots</title>
+    <link rel="icon" href="./public/favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./../../public/css/app.css" />
+    <script src="./../../public/js/app.js" type="module"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./../../modules/bootstrap/css/bootstrap.css" />
+    <script src="./../../modules/bootstrap/js/bootstrap.bundle.js"></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header id="header"></header>
+    <main role="main" class="flex-grow-1 d-flex flex-column pt-2 px-4 bg-green-light">
+        <!-- Dernier établissement visité -->
+        <section class="my-2">
+            <h1 class="h2">Dernier établissement visité</h1>
+            <div class="border border-black rounded p-1 bg-brown-light">
+                <div>
+                    <img class="img-fluid w-100" src="./../../public/images/friends/feed/auberge.png" alt="Auberge" />
+                </div>
+                <form class="d-flex flex-column">
+                    <div class="rating">
+                        <label>
+                            <input type="radio" name="stars" value="1" />
+                            <span class="icon">★</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="stars" value="2" />
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="stars" value="3" />
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="stars" value="4" />
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="stars" value="5" />
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                            <span class="icon">★</span>
+                        </label>
+                    </div>
+                    <textarea class="form-control" placeholder="Laissez un commentaire..."></textarea>
+                    <button type="button" class="btn btn-success">Envoyer</button>                    
+                </form>
+            </div>
+        </section>
+        <!-- Posts -->
+        <section class="my-2">
+            <h1 class="h2">Amies</h1>
+            <div class="bg-brown-light">
+                <span>
+                    <i class="bi bi-person-circle"></i>
+                    Boby
+                    <span class="text-primary fw-light">@bobLExplorateur</span>
+                </span>
+                <div class="border border-black rounded p-1">
+                    <div>
+                        <img class="img-fluid w-100" src="./../../public/images/friends/feed/map.png" alt="carte" />
+                    </div>
+                    <div class="fst-italic fs-6 pt-1">
+                        01/02/2025 | 17 km | 4h32 | +/- 500 m
+                    </div>
+                </div>
+                <div class="border border-black border-top-0 rounded p-2 fs-6">
+                    Superbe randonnée, mais la pluie était au rendez-vous !
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer-primary"></footer>
+</body>
+
+</html>
